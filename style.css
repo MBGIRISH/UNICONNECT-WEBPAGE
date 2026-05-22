@@ -91,7 +91,8 @@ body {
     width: 100%;
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /* Floating Atmosphere Glow Orbs */
@@ -3237,7 +3238,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 1024px) {
     .container {
-        padding: 0 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     
     .main-header {
@@ -3336,7 +3338,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .container {
-        padding: 0 1.2rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
     }
 
     .tech-box, .gtm-box, .roadmap-viewport, .founders-spotlight {
@@ -3439,7 +3442,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .container {
-        padding: 0 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .main-header {
