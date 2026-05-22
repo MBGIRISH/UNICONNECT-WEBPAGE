@@ -58,6 +58,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -66,6 +68,7 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    max-width: 100%;
     position: relative;
 }
 
@@ -493,6 +496,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     position: relative;
+    animation: floatDevice 6s infinite ease-in-out alternate;
 }
 
 /* Glowing background shadow for phone mockup */
@@ -514,7 +518,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 25px 60px rgba(0,0,0,0.8), inset 0 0 8px rgba(255,255,255,0.1);
     position: relative;
     overflow: hidden;
-    animation: floatDevice 6s infinite ease-in-out alternate;
 }
 
 @keyframes floatDevice {
@@ -3120,6 +3123,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     color: var(--text-muted);
     cursor: pointer;
+    display: inline;
+    margin-bottom: 0;
 }
 
 /* Success Modal View States */
@@ -3273,6 +3278,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .glow-orb {
+        display: none !important;
+    }
+
+    .container {
+        padding: 0 1.2rem;
+    }
+
+    .tech-box, .gtm-box, .roadmap-viewport, .founders-spotlight {
+        padding: 1.5rem;
+    }
+
     .nav-menu {
         display: none; /* Mobile navigation toggle handles below */
         position: absolute;
@@ -3329,5 +3346,36 @@ h1, h2, h3, h4, h5, h6 {
     
     .modal-card {
         padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .device-frame {
+        transform: scale(0.85);
+        transform-origin: center top;
+        margin-bottom: -90px;
+    }
+    
+    .founder-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .founder-photo {
+        width: 120px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 360px) {
+    .device-frame {
+        transform: scale(0.72);
+        transform-origin: center top;
+        margin-bottom: -170px;
     }
 }
