@@ -3509,3 +3509,17 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: -170px;
     }
 }
+
+/* ==========================================================================
+   VERCEL INJECTED TOOLBAR ACCESSIBILITY & HIDE OVERRIDES
+   ========================================================================== */
+vercel-live-feedback, 
+#vercel-live-feedback,
+.__vercel_toolbar,
+[id^="vercel-live-feedback"],
+[class^="vercel-live-feedback"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
