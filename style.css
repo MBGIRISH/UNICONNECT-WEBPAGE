@@ -3314,7 +3314,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
     
-    .btn-header-ambassador {
+    #btn-header-ambassador {
         display: none; /* Hide secondary on mobile to conserve space */
     }
     
@@ -3336,12 +3336,26 @@ h1, h2, h3, h4, h5, h6 {
         gap: 2.5rem;
     }
     
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1rem;
+    }
+    
     .final-signup-form {
         flex-direction: column;
     }
     
     .final-cta-card {
         padding: 3rem 1.5rem;
+    }
+    
+    .modal-overlay {
+        padding: 1rem;
     }
     
     .modal-card {
@@ -3354,6 +3368,34 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 1rem;
     }
     
+    .main-header {
+        width: calc(100% - 1.5rem);
+        top: 0.75rem;
+        height: 4rem;
+    }
+    
+    .header-container {
+        padding: 0 0.8rem;
+    }
+    
+    .brand-logo {
+        font-size: 1.15rem;
+    }
+    
+    .logo-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .header-actions {
+        gap: 0.5rem;
+    }
+    
+    .header-actions .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
     .device-frame {
         transform: scale(0.85);
         transform-origin: center top;
@@ -3369,6 +3411,14 @@ h1, h2, h3, h4, h5, h6 {
     .founder-photo {
         width: 120px;
         height: 140px;
+    }
+    
+    .modal-card {
+        padding: 1.8rem 1.2rem;
+    }
+    
+    .modal-header h3 {
+        font-size: 1.35rem;
     }
 }
 
