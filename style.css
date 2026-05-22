@@ -1835,7 +1835,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Hub Visual with Orbiting Satellite nodes */
+/* Hub Visual with Orbiting Satellite nodes */
 .hub-visual {
+    --orbit-radius: 200px;
+    --sat-size: 80px;
     width: 100%;
     max-width: 600px;
     height: 400px;
@@ -1844,6 +1847,15 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.hub-visual:active {
+    cursor: grabbing;
 }
 
 .hub-core-node {
@@ -1859,6 +1871,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow-glow);
     z-index: 5;
     position: relative;
+    transform: translateZ(0px);
 }
 
 .core-logo {
@@ -1874,11 +1887,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0.4rem;
 }
 
+.hub-orbit-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: rotateX(65deg) rotateY(var(--ring-rotation, 0deg));
+    transition: transform 0.1s ease-out;
+}
+
 /* Orbiting Nodes */
 .satellite-node {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: var(--sat-size, 80px);
+    height: var(--sat-size, 80px);
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 50%;
@@ -1886,37 +1911,44 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: var(--transition);
-    transform: rotate(var(--angle)) translate(200px) rotate(calc(-1 * var(--angle)));
     cursor: pointer;
+    transform-style: preserve-3d;
+    transform: rotateY(var(--angle)) translateZ(var(--orbit-radius, 200px)) rotateY(calc(-1 * var(--angle) - var(--ring-rotation, 0deg))) rotateX(-65deg);
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s, opacity 0.3s, filter 0.3s;
 }
 
 .satellite-node:hover {
     border-color: var(--secondary);
     box-shadow: var(--shadow-glow-cyan);
-    transform: rotate(var(--angle)) translate(210px) rotate(calc(-1 * var(--angle))) scale(1.1);
+    background: rgba(139, 92, 246, 0.05);
 }
 
 .sat-icon {
     font-size: 1.8rem;
+    pointer-events: none;
 }
 
 .sat-label {
     font-size: 0.65rem;
     font-weight: 600;
     margin-top: 0.15rem;
+    text-align: center;
+    pointer-events: none;
 }
 
 /* Connection vectors representation */
 .hub-visual::before {
     content: '';
     position: absolute;
-    width: 400px;
-    height: 400px;
-    border: 1px dashed rgba(255,255,255,0.06);
+    width: calc(2 * var(--orbit-radius, 200px));
+    height: calc(2 * var(--orbit-radius, 200px));
+    border: 1px dashed rgba(255, 255, 255, 0.06);
     border-radius: 50%;
     z-index: 1;
     pointer-events: none;
+    transform-style: preserve-3d;
+    transform: rotateX(65deg) translateZ(-5px);
+    transition: width 0.3s, height 0.3s;
 }
 
 .solution-grid {
@@ -3278,6 +3310,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .section-hero {
+        padding-top: 11.5rem; /* Push down hero section to clear fixed header and show glowing badge */
+    }
+
+    .hub-visual {
+        --orbit-radius: 140px;
+        --sat-size: 72px;
+        height: 320px;
+        margin: 2rem auto;
+    }
+
+    .hub-core-node {
+        width: 110px;
+        height: 110px;
+    }
+
+    .core-logo {
+        width: 38px;
+        height: 38px;
+    }
+
     .glow-orb {
         display: none !important;
     }
@@ -3364,6 +3417,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
+    .section-hero {
+        padding-top: 10.5rem; /* Spacious top padding on smaller mobile viewports */
+    }
+
+    .hub-visual {
+        --orbit-radius: 115px;
+        --sat-size: 65px;
+        height: 280px;
+        margin: 1.5rem auto;
+    }
+
+    .hub-core-node {
+        width: 95px;
+        height: 95px;
+    }
+
+    .core-logo {
+        width: 32px;
+        height: 32px;
+    }
+
     .container {
         padding: 0 1rem;
     }

@@ -1046,4 +1046,181 @@ document.addEventListener('DOMContentLoaded', () => {
             showFloatingToast(`✓ Successfully uploaded "${fileName}" to the Feature Tour!`);
         });
     }
+
+    // ==========================================
+    // 12. STATE-OF-THE-ART 3D ORBITING FEATURES WHEEL CONTROLLER
+    // ==========================================
+    const hubVisual = document.querySelector('.hub-visual');
+    const orbitRing = document.querySelector('.hub-orbit-ring');
+    const satellites = document.querySelectorAll('.satellite-node');
+
+    if (hubVisual && orbitRing && satellites.length > 0) {
+        let currentRotation = 0; // Degrees
+        let targetRotation = 0; // Smooth easing target
+        let isDragging = false;
+        let startX = 0;
+        let previousX = 0;
+        let lastTime = 0;
+        let velocity = 0; // Kinetic momentum speed
+        let autoRotateActive = true;
+        let autoRotateTimeout = null;
+
+        // Apply 3D upright billboarding counter-rotation on every satellite
+        function updateRingTransform() {
+            orbitRing.style.setProperty('--ring-rotation', `${currentRotation}deg`);
+            satellites.forEach(sat => {
+                const satAngle = parseFloat(sat.getAttribute('data-angle'));
+                // Standard billboard transformation that completely neutralizes ring tilt and rotation
+                sat.style.transform = `rotateY(${satAngle}deg) translateZ(var(--orbit-radius, 200px)) rotateY(${-satAngle - currentRotation}deg) rotateX(-65deg)`;
+            });
+        }
+
+        // Kinetic physics and auto-rotation animation loop
+        function animationLoop(timestamp) {
+            if (isDragging) {
+                // Dragging computes immediate changes, no loop damping
+                lastTime = timestamp;
+            } else {
+                // Apply drag friction/inertia decay
+                if (Math.abs(velocity) > 0.05) {
+                    currentRotation += velocity;
+                    velocity *= 0.95; // Friction coefficient
+                } else {
+                    velocity = 0;
+                    
+                    // Smoothly animate towards click-to-focus targets
+                    if (Math.abs(targetRotation - currentRotation) > 0.1) {
+                        currentRotation += (targetRotation - currentRotation) * 0.1;
+                    } else if (autoRotateActive) {
+                        // Regular constant auto spin when idle
+                        currentRotation += 0.08; 
+                        targetRotation = currentRotation;
+                    }
+                }
+            }
+
+            // Normalization to keep rotation coordinates clean [0, 360]
+            if (currentRotation > 360) {
+                currentRotation -= 360;
+                targetRotation -= 360;
+            } else if (currentRotation < 0) {
+                currentRotation += 360;
+                targetRotation += 360;
+            }
+
+            updateRingTransform();
+            requestAnimationFrame(animationLoop);
+        }
+
+        // Temporarily pause auto rotation during interaction
+        function pauseAutoRotateTemporarily() {
+            autoRotateActive = false;
+            clearTimeout(autoRotateTimeout);
+            autoRotateTimeout = setTimeout(() => {
+                autoRotateActive = true;
+                targetRotation = currentRotation;
+            }, 3500); // Resume auto-rotate after 3.5 seconds of absolute silence
+        }
+
+        // Drag start triggers (Desktop & Mobile)
+        function onDragStart(clientX) {
+            isDragging = true;
+            startX = clientX;
+            previousX = clientX;
+            lastTime = performance.now();
+            velocity = 0;
+            pauseAutoRotateTemporarily();
+        }
+
+        // Drag moving triggers (Desktop & Mobile)
+        function onDragMove(clientX) {
+            if (!isDragging) return;
+            const deltaX = clientX - previousX;
+            const now = performance.now();
+            const elapsed = now - lastTime;
+
+            // Translate horizontal swipe/drag screen pixels into angular rotation degrees
+            const sensitivity = 0.45; 
+            currentRotation += deltaX * sensitivity;
+            targetRotation = currentRotation;
+
+            // Compute instant swipe speed for momentum release
+            if (elapsed > 0) {
+                velocity = (deltaX * sensitivity) / (elapsed / 16.66); // Normalized speed
+            }
+
+            previousX = clientX;
+            lastTime = now;
+        }
+
+        // Drag release triggers (Desktop & Mobile)
+        function onDragEnd() {
+            isDragging = false;
+            // Cap maximum inertia velocity to avoid dizzying spinning
+            velocity = Math.max(-10, Math.min(10, velocity));
+        }
+
+        // Mouse listeners
+        hubVisual.addEventListener('mousedown', (e) => {
+            onDragStart(e.clientX);
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            onDragMove(e.clientX);
+        });
+
+        window.addEventListener('mouseup', () => {
+            onDragEnd();
+        });
+
+        // Touch listeners (Mobile native support)
+        hubVisual.addEventListener('touchstart', (e) => {
+            if (e.touches && e.touches[0]) {
+                onDragStart(e.touches[0].clientX);
+            }
+        }, { passive: true });
+
+        hubVisual.addEventListener('touchmove', (e) => {
+            if (e.touches && e.touches[0]) {
+                onDragMove(e.touches[0].clientX);
+            }
+        }, { passive: true });
+
+        hubVisual.addEventListener('touchend', () => {
+            onDragEnd();
+        });
+
+        // Click a satellite node to bring it straight to the absolute front (closest perspective point)
+        satellites.forEach(sat => {
+            sat.addEventListener('click', (e) => {
+                e.stopPropagation();
+                pauseAutoRotateTemporarily();
+
+                const satAngle = parseFloat(sat.getAttribute('data-angle'));
+                
+                // Front position on a X-tilted circle is at 180 degrees index, 
+                // so we align target rotation to place it straight forward
+                let targetAngle = 180 - satAngle;
+
+                // Adjust to spin along the shortest mathematical path
+                let diff = (targetAngle - currentRotation) % 360;
+                if (diff > 180) diff -= 360;
+                if (diff < -180) diff += 360;
+
+                targetRotation = currentRotation + diff;
+                velocity = 0; // Interrupt any ongoing momentum spins
+
+                // Play custom glowing active states
+                satellites.forEach(s => {
+                    s.style.borderColor = '';
+                    s.style.boxShadow = '';
+                });
+                sat.style.borderColor = 'var(--secondary)';
+                sat.style.boxShadow = 'var(--shadow-glow-cyan)';
+            });
+        });
+
+        // Kickoff Animation Loop
+        requestAnimationFrame(animationLoop);
+    }
 });
