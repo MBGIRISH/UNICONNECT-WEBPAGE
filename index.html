@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniConnect — The Operating System for College Life</title>
+    <meta name="description" content="UniConnect unifies student social life, campus communication, events, verified marketplace, communities, and networking into a single secure platform. Instantly gating active campuses with .edu SSO.">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon (Inline SVG for instant premium branding) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B5CF6' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m8 3 4 8 5-5 5 15H2L8 3z'/%3E%3C/svg%3E">
+</head>
+<body class="theme-obsidian">
+
+    <!-- Background Glow Blobs for cinematic depth -->
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-accent"></div>
+
+    <!-- STICKY GLASSMORPHIC HEADER -->
+    <header class="main-header glass-panel">
+        <div class="header-container container">
+            <a href="#" class="brand-logo" id="header-logo">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+                </svg>
+                <span class="logo-text">Uni<span class="highlight-text">Connect</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#problem" class="nav-link">The Pain</a>
+                <a href="#solution" class="nav-link">The Platform</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#market" class="nav-link">Market</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+                <a href="#founders" class="nav-link">Team</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-secondary btn-sm" id="btn-header-ambassador">Ambassador</button>
+                <button class="btn btn-primary btn-sm btn-glow" id="btn-header-waitlist">Join Waitlist</button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="section-hero hero-layout container" id="hero">
+            <div class="hero-content reveal-on-scroll">
+                <div class="badge-glowing">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">✨ The College Super-App</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Building the <span class="gradient-text">Operating System</span> for College Life
+                </h1>
+                
+                <p class="hero-subtitle">
+                    One unified platform for social feeds, student communities, verified trading, campus events, real-time messaging, career networking, and academic identity.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg btn-glow trigger-waitlist-modal" id="hero-cta-primary">Join the Waitlist</button>
+                    <button class="btn btn-secondary btn-lg trigger-ambassador-modal" id="hero-cta-secondary">Become a Campus Ambassador</button>
+                </div>
+
+                <div class="hero-social-proof">
+                    <span class="proof-label">Gated securely with official academic email (.edu / .in) SSO</span>
+                    <div class="proof-universities">
+                        <span class="uni-tag">🎓 RVCE</span>
+                        <span class="uni-tag">🎓 PESU</span>
+                        <span class="uni-tag">🎓 BMSCE</span>
+                        <span class="uni-tag">🎓 MSRIT</span>
+                        <span class="uni-tag">🎓 IIIT-B</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE MOBILE APP SIMULATOR -->
+            <div class="hero-mockup reveal-on-scroll">
+                <div class="device-frame">
+                    <div class="device-speaker"></div>
+                    <div class="device-camera"></div>
+                    
+                    <!-- Simulated App Screen -->
+                    <div class="app-screen">
+                        <!-- App Header -->
+                        <div class="app-header">
+                            <div class="app-status">
+                                <span class="app-college-name">RV College of Engineering</span>
+                                <span class="app-verified-badge" title="Verified Campus Grid">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                </span>
+                            </div>
+                            <div class="app-notifications-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                            </div>
+                        </div>
+
+                        <!-- Active View Container -->
+                        <div class="app-view-body" id="app-view-container">
+                            
+                            <!-- SCREEN 1: LOCAL CAMPUS SOCIAL FEED (GATED) -->
+                            <div class="app-view active" id="view-feed">
+                                <div class="feed-gated-indicator">
+                                    <span>🔒 Gated to RVCE Bengaluru Grid</span>
+                                    <button class="feed-post-trigger" id="feed-post-trigger">+ Post</button>
+                                </div>
+
+                                <div class="feed-channels-tabs">
+                                    <button class="channel-tab active" data-channel="all">#all</button>
+                                    <button class="channel-tab" data-channel="academics">#academics</button>
+                                    <button class="channel-tab" data-channel="social">#social</button>
+                                </div>
+
+                                <div class="feed-posts-scroll-area">
+                                    <div class="feed-stories">
+                                        <div class="story-bubble add-story">
+                                            <div class="story-avatar">+</div>
+                                            <span>Post Story</span>
+                                        </div>
+                                        <div class="story-bubble active">
+                                            <div class="story-avatar p1"></div>
+                                            <span>Sarah (CS)</span>
+                                        </div>
+                                        <div class="story-bubble active">
+                                            <div class="story-avatar p2"></div>
+                                            <span>David (Bio)</span>
+                                        </div>
+                                        <div class="story-bubble">
+                                            <div class="story-avatar p3"></div>
+                                            <span>Leo (Biz)</span>
+                                        </div>
+                                    </div>
+
+                                    <div id="feed-posts-container">
+                                        <!-- Post 1 (Academics Channel) -->
+                                        <div class="mock-post" data-channel="academics">
+                                            <div class="post-header">
+                                                <div class="post-avatar p4"></div>
+                                                <div class="post-meta">
+                                                    <span class="post-author">Ananya Rao <span class="badge-tag">RVCE '27</span></span>
+                                                    <span class="post-time">10m ago in #academics</span>
+                                                </div>
+                                                <span class="post-menu">•••</span>
+                                            </div>
+                                            <div class="post-content">
+                                                <p>Hey guys! Anyone down to form a study group for the CS101 DSA recursion assignment? Grabbing hot chai at the campus canteen in 20 mins! ☕📚</p>
+                                            </div>
+                                            <div class="post-poll">
+                                                <div class="poll-option active" style="--percent: 74%">
+                                                    <span class="option-name">Count me in!</span>
+                                                    <span class="option-val">74%</span>
+                                                </div>
+                                                <div class="poll-option" style="--percent: 26%">
+                                                    <span class="option-name">Too busy coding</span>
+                                                    <span class="option-val">26%</span>
+                                                </div>
+                                            </div>
+                                            <div class="post-footer">
+                                                <span class="post-action post-like-btn" data-liked="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> <span class="like-count">42</span> Likes</span>
+                                                <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 12 Comments</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Post 2 (Social Channel) -->
+                                        <div class="mock-post" data-channel="social">
+                                            <div class="post-header">
+                                                <div class="post-avatar p2"></div>
+                                                <div class="post-meta">
+                                                    <span class="post-author">Siddharth Sharma <span class="badge-tag">Senior, ECE</span></span>
+                                                    <span class="post-time">1h ago in #social</span>
+                                                </div>
+                                                <span class="post-menu">•••</span>
+                                            </div>
+                                            <div class="post-content">
+                                                <p>Fest Beats at the Main Ground is incredibly packed! The DJ set is crazy tonight. Anyone got extra glow sticks? 🎵🕺✨</p>
+                                            </div>
+                                            <div class="post-footer">
+                                                <span class="post-action post-like-btn" data-liked="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> <span class="like-count">89</span> Likes</span>
+                                                <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 5 Comments</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- MOCK POST CREATOR DIALOG (HIDDEN BY DEFAULT) -->
+                                <div class="feed-creator-overlay" id="feed-creator-modal" style="display:none;">
+                                    <div class="feed-creator-box glass-panel">
+                                        <div class="creator-header">
+                                            <span>Share with RVCE</span>
+                                            <button class="creator-close" id="btn-close-creator">×</button>
+                                        </div>
+                                        <div class="creator-channel-select">
+                                            <label>Channel:</label>
+                                            <select id="post-channel">
+                                                <option value="academics">#academics</option>
+                                                <option value="social">#social</option>
+                                            </select>
+                                        </div>
+                                        <textarea id="post-text" placeholder="What is happening on campus today?"></textarea>
+                                        <button class="btn btn-primary btn-sm btn-block" id="btn-submit-post">Publish Post</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SCREEN 2: GROUPS & COMMUNITIES (UPGRADED) -->
+                            <div class="app-view" id="view-groups">
+                                <div class="groups-directory active" id="groups-dir-view">
+                                    <div class="app-section-title">
+                                        <span>Campus Directory</span>
+                                        <button class="btn-create-group" id="btn-mock-create-group">+ Create</button>
+                                    </div>
+                                    <div class="groups-search-bar">
+                                        <input type="text" placeholder="Search clubs, study rooms..." disab                                    <div class="groups-list">
+                                        <!-- CS101 DSA Study Group -->
+                                        <div class="group-card-item open-chat-trigger" data-group="CS101 DSA Study Group">
+                                            <div class="group-icon c-grp">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-svg">
+                                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="group-info-meta">
+                                                <div class="group-name-row">
+                                                    <span class="group-name">CS101 DSA Study Group</span>
+                                                    <span class="group-type-badge private">Private</span>
+                                                </div>
+                                                <span class="group-last-msg">Sofia: Meeting at the campus canteen now...</span>
+                                             </div>
+                                             <button class="btn-group-action btn-active-chat">Chat</button>
+                                        </div>
+                                         
+                                        <!-- CS Society -->
+                                        <div class="group-card-item" data-group="CS Society">
+                                            <div class="group-icon public-grp">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-svg">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="group-info-meta">
+                                                <div class="group-name-row">
+                                                    <span class="group-name">CS Society (ACM)</span>
+                                                    <span class="group-type-badge public">Public</span>
+                                                </div>
+                                                <span class="group-last-msg">Official: Next Hackathon registration is open...</span>
+                                            </div>
+                                            <button class="btn-group-action btn-join-group">Join</button>
+                                        </div>
+ 
+                                        <!-- Debate Club -->
+                                        <div class="group-card-item" data-group="Debate Club">
+                                            <div class="group-icon public-grp">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-svg">
+                                                    <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                                                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                                                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="group-info-meta">
+                                                <div class="group-name-row">
+                                                    <span class="group-name">RVCE Debate Club</span>
+                                                    <span class="group-type-badge public">Public</span>
+                                                </div>
+                                                <span class="group-last-msg">James: Training session moved to room 204...</span>
+                                            </div>
+                                            <button class="btn-group-action btn-join-group">Join</button>
+                                        </div>
+ 
+                                        <!-- Dorm 3B Lounge -->
+                                        <div class="group-card-item" data-group="Dorm 3B Lounge">
+                                            <div class="group-icon private-grp">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-svg">
+                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="group-info-meta">
+                                                <div class="group-name-row">
+                                                    <span class="group-name">Hostel Block 3 Lounge</span>
+                                                    <span class="group-type-badge private">Private</span>
+                                                </div>
+                                                <span class="group-last-msg">Private loop. Gated to Cauvery Block...</span>
+                                            </div>                                          </div>
+                                            <button class="btn-group-action btn-request-group">Request</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- NESTED CHAT VIEW (SLIDES IN WHEN CLICKING CHAT) -->
+                                <div class="nested-chat-view" id="nested-chat-pane" style="display:none;">
+                                    <div class="chat-header-bar">
+                                        <button class="chat-back-btn" id="chat-back-to-dir">◀ Back</button>
+                                        <div class="chat-avatar c-grp"></div>
+                                        <div class="chat-info">
+                                            <span class="chat-title" id="chat-active-title">CS101 DSA Study Group</span>
+                                            <span class="chat-status">🟢 8 active members</span>
+                                        </div>
+                                        <div class="chat-call-icon">📞</div>
+                                    </div>
+                                    <div class="chat-messages" id="chat-msg-area">
+                                        <div class="chat-bubble received">
+                                            <span class="sender-name">Rahul Sen</span>
+                                            <p>Hey, did anyone solve recursion challenge 4? I keep hitting a stack overflow error...</p>
+                                            <span class="msg-time">11:02 AM</span>
+                                        </div>
+                                        <div class="chat-bubble sent">
+                                            <p>Yeah! The key is that your base case needs to evaluate if the node children count is zero before calling recursive steps. Check the PDF sheet!</p>
+                                            <span class="msg-time">11:04 AM</span>
+                                        </div>
+                                        <div class="chat-bubble received">
+                                            <span class="sender-name">Sofia Rossi</span>
+                                            <p>Ahhh, that makes sense! Meeting at the campus canteen now if anyone wants to write the code together. I have samosas! 🥟</p>
+                                            <span class="msg-time">11:05 AM</span>
+                                        </div>
+                                        <div class="typing-indicator" id="chat-typing-indicator">
+                                            <span></span><span></span><span></span>
+                                            <span class="typing-label">Alex is typing...</span>
+                                        </div>
+                                    </div>
+                                    <div class="chat-input-area">
+                                        <input type="text" placeholder="Type a message..." id="chat-input-box">
+                                        <button class="chat-send-btn" id="chat-send-trigger">➤</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SCREEN 3: VERIFIED MARKETPLACE -->
+                            <div class="app-view" id="view-marketplace">
+                                <div class="app-section-title">
+                                    <span>Verified Student Marketplace</span>
+                                    <span class="filter-btn">Filter</span>
+                                </div>
+                                <div class="market-grid">
+                                    <div class="market-card">
+                                        <div class="item-img m1">📚</div>
+                                        <div class="item-info">
+                                            <span class="item-price">₹1,500</span>
+                                            <span class="item-title">Engineering Mathematics (BS Grewal)</span>
+                                            <span class="item-badge">Verified Sophomore Seller</span>
+                                            <span class="item-location">📍 Hostel Block 3 Lounge</span>
+                                        </div>
+                                    </div>
+                                    <div class="market-card">
+                                        <div class="item-img m2">💻</div>
+                                        <div class="item-info">
+                                            <span class="item-price">₹45,000</span>
+                                            <span class="item-title">MacBook Air M2 (8/256GB)</span>
+                                            <span class="item-badge">Verified Grad Student</span>
+                                            <span class="item-location">📍 Cauvery Block Canteen</span>
+                                        </div>
+                                    </div>
+                                    <div class="market-card">
+                                        <div class="item-img m3">🚲</div>
+                                        <div class="item-info">
+                                            <span class="item-price">₹4,500</span>
+                                            <span class="item-title">Road Bike - 12 Speed</span>
+                                            <span class="item-badge">Senior Moving Out</span>
+                                            <span class="item-location">📍 Main Ground Entrance</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SCREEN 4: STUDENT RESOURCES VAULT (NEW) -->
+                            <div class="app-view" id="view-resources">
+                                <div class="app-section-title">
+                                    <span>Academic Vault</span>
+                                    <button class="btn-upload-resource" id="btn-trigger-upload-modal">+ Upload</button>
+                                </div>
+                                <div class="resources-search-bar">
+                                    <input type="text" placeholder="Search course files..." id="res-search-input" disabled>
+                                </div>
+                                <div class="resources-course-tags">
+                                    <span class="course-tag active" data-filter="all">All</span>
+                                    <span class="course-tag" data-filter="cs106b">CS106b</span>
+                                    <span class="course-tag" data-filter="math51">Math51</span>
+                                    <span class="course-tag" data-filter="bio41">Bio41</span>
+                                </div>
+                                <div class="resources-list" id="resources-list-container">
+                                    <!-- Resource 1 -->
+                                    <div class="resource-card-item" data-course="cs106b">
+                                        <div class="res-type-icon">📝</div>
+                                        <div class="res-info-meta">
+                                            <span class="res-title">Recursion Cheat Sheet v2.pdf</span>
+                                            <span class="res-meta-details">CS106B • ⭐ 4.9 (342 DLs)</span>
+                                        </div>
+                                        <button class="btn-res-download" data-file="Recursion Cheat Sheet v2.pdf">Download</button>
+                                    </div>
+
+                                    <!-- Resource 2 -->
+                                    <div class="resource-card-item" data-course="math51">
+                                        <div class="res-type-icon">📐</div>
+                                        <div class="res-info-meta">
+                                            <span class="res-title">Midterm Prep Guide 2025.pdf</span>
+                                            <span class="res-meta-details">Math51 • ⭐ 5.0 (612 DLs)</span>
+                                        </div>
+                                        <button class="btn-res-download" data-file="Midterm Prep Guide 2025.pdf">Download</button>
+                                    </div>
+
+                                    <!-- Resource 3 -->
+                                    <div class="resource-card-item" data-course="bio41">
+                                        <div class="res-type-icon">🔬</div>
+                                        <div class="res-info-meta">
+                                            <span class="res-title">Bio41 Lab Exam Study Notes.pdf</span>
+                                            <span class="res-meta-details">Bio41 • ⭐ 4.8 (189 DLs)</span>
+                                        </div>
+                                        <button class="btn-res-download" data-file="Bio41 Lab Exam Study Notes.pdf">Download</button>
+                                    </div>
+                                </div>
+
+                                <!-- RESOURCE UPLOAD SIMULATOR MODAL (HIDDEN BY DEFAULT) -->
+                                <div class="res-upload-overlay" id="res-upload-modal" style="display:none;">
+                                    <div class="res-upload-box glass-panel">
+                                        <div class="upload-modal-header">
+                                            <span>Upload Academic Note</span>
+                                            <button class="upload-modal-close" id="btn-close-upload">×</button>
+                                        </div>
+                                        <div class="upload-fields">
+                                            <div class="upload-field-row">
+                                                <label>Title:</label>
+                                                <input type="text" id="up-title" placeholder="e.g. Midterm Cheat Sheet">
+                                            </div>
+                                            <div class="upload-field-row">
+                                                <label>Course:</label>
+                                                <select id="up-course">
+                                                    <option value="CS106B">CS106B</option>
+                                                    <option value="Math51">Math51</option>
+                                                    <option value="Bio41">Bio41</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm btn-block" id="btn-submit-upload">Verify & Upload</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SCREEN 5: CAMPUS EVENTS -->
+                            <div class="app-view" id="view-events">
+                                <div class="app-section-title">
+                                    <span>Discover Campus Events</span>
+                                    <span class="filter-btn">My RSVPs</span>
+                                </div>
+                                <div class="event-list">
+                                    <div class="event-item">
+                                        <div class="event-date">
+                                            <span class="month">MAY</span>
+                                            <span class="day">25</span>
+                                        </div>
+                                        <div class="event-details">
+                                            <span class="event-title">UniConnect Spring Hackathon 🚀</span>
+                                            <span class="event-time">⏱️ Sat, 10:00 AM • Gates CS Building</span>
+                                            <span class="event-goers">👥 382 students registered</span>
+                                        </div>
+                                        <button class="rsvp-btn active">RSVP'd</button>
+                                    </div>
+                                    <div class="event-item">
+                                        <div class="event-date">
+                                            <span class="month">MAY</span>
+                                            <span class="day">28</span>
+                                        </div>
+                                        <div class="event-details">
+                                            <span class="event-title">Sunset Beats Concert 🎵</span>
+                                            <span class="event-time">⏱️ Tue, 6:00 PM • The Oval Lawn</span>
+                                            <span class="event-goers">👥 894 students going</span>
+                                        </div>
+                                        <button class="rsvp-btn">Join RSVP</button>
+                                    </div>
+                                    <div class="event-item">
+                                        <div class="event-date">
+                                            <span class="month">JUN</span>
+                                            <span class="day">02</span>
+                                        </div>
+                                        <div class="event-details">
+                                            <span class="event-title">Senior Career Panel & BBQ 🍔</span>
+                                            <span class="event-time">⏱️ Sun, 12:00 PM • Arrillaga Plaza</span>
+                                            <span class="event-goers">👥 140 going • Alumni panels</span>
+                                        </div>
+                                        <button class="rsvp-btn">Join RSVP</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- App Bottom Navigation (Interactive Tabs Expanded to 5) -->
+                        <div class="app-bottom-nav">
+                            <button class="tab-btn active" data-target="view-feed" id="tab-feed">
+                                <div class="tab-icon">📱</div>
+                                <span>Feed</span>
+                            </button>
+                            <button class="tab-btn" data-target="view-groups" id="tab-groups">
+                                <div class="tab-icon">💬</div>
+                                <span>Groups</span>
+                            </button>
+                            <button class="tab-btn" data-target="view-marketplace" id="tab-marketplace">
+                                <div class="tab-icon">🛍️</div>
+                                <span>Market</span>
+                            </button>
+                            <button class="tab-btn" data-target="view-resources" id="tab-resources">
+                                <div class="tab-icon">📚</div>
+                                <span>Resources</span>
+                            </button>
+                            <button class="tab-btn" data-target="view-events" id="tab-events">
+                                <div class="tab-icon">📅</div>
+                                <span>Events</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEM SECTION -->
+        <section class="section-problem" id="problem">
+            <div class="container reveal-on-scroll">
+                <div class="section-header-centered">
+                    <span class="section-badge">The Problem</span>
+                    <h2 class="section-title">College Life is Digitally Broken</h2>
+                    <p class="section-subtitle">Today's students are forced to glue together an unorganized web of generic platforms just to survive. The experience is noisy, unsafe, and fragmented.</p>
+                </div>
+
+                <div class="problem-grid">
+                    <!-- Card 1 -->
+                    <div class="problem-card glass-panel border-hover-purple">
+                        <div class="card-icon icon-purple">📱</div>
+                        <h3 class="card-title">Scattered Conversations</h3>
+                        <p class="card-text">Clubs are on Discord. Departmental announcements on Slack. Study chats on WhatsApp. Important events on Instagram. Essential communication is buried under endless notifications.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="problem-card glass-panel border-hover-cyan">
+                        <div class="card-icon icon-cyan">⚠️</div>
+                        <h3 class="card-title">Sketchy Marketplace Trading</h3>
+                        <p class="card-text">Trading textbooks, dorm items, or tickets involves sketchy off-campus Facebook groups, meeting strangers in unlit parking lots, and endless scam bots. Zero security, infinite friction.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="problem-card glass-panel border-hover-red">
+                        <div class="card-icon icon-red">🔇</div>
+                        <h3 class="card-title">Invisible Campus Events</h3>
+                        <p class="card-text">Half of the student body misses out on high-value guest lectures, club meetups, concert tickets, or networking hackathons because flyers are glued on dining hall walls or locked behind single groupchats.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="problem-card glass-panel border-hover-primary">
+                        <div class="card-icon icon-primary">🧊</div>
+                        <h3 class="card-title">Cold, Rigid Networking</h3>
+                        <p class="card-text">Reaching out to peers for project collaborations, mentors for career tips, or alumni for internships feels unnatural. Cold LinkedIn outreach is stiff and returns a 2% reply rate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUTION SECTION -->
+        <section class="section-solution" id="solution">
+            <div class="container reveal-on-scroll">
+                <div class="section-header-centered">
+                    <span class="section-badge">The Solution</span>
+                    <h2 class="section-title">One App. Every College Need.</h2>
+                    <p class="section-subtitle">UniConnect consolidates the fractured campus experience into an elegant, closed-loop network. It represents the first dedicated Operating System built exclusively for university ecosystems.</p>
+                </div>
+
+                <!-- Central Connected Visual Architecture -->
+                <div class="hub-visual">
+                    <div class="hub-core-node">
+                        <div class="core-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+                            </svg>
+                        </div>
+                        <span class="core-label">UniConnect Core</span>
+                    </div>
+
+                    <div class="satellite-node s1" style="--angle: 0deg">
+                        <div class="sat-icon">📱</div>
+                        <span class="sat-label">Social Feed</span>
+                    </div>
+                    <div class="satellite-node s2" style="--angle: 60deg">
+                        <div class="sat-icon">🛍️</div>
+                        <span class="sat-label">Verified Market</span>
+                    </div>
+                    <div class="satellite-node s3" style="--angle: 120deg">
+                        <div class="sat-icon">📅</div>
+                        <span class="sat-label">Events Hub</span>
+                    </div>
+                    <div class="satellite-node s4" style="--angle: 180deg">
+                        <div class="sat-icon">💬</div>
+                        <span class="sat-label">Campus Chat</span>
+                    </div>
+                    <div class="satellite-node s5" style="--angle: 240deg">
+                        <div class="sat-icon">🤝</div>
+                        <span class="sat-label">Alumni Network</span>
+                    </div>
+                    <div class="satellite-node s6" style="--angle: 300deg">
+                        <div class="sat-icon">🪪</div>
+                        <span class="sat-label">Student SSO ID</span>
+                    </div>
+                </div>
+
+                <div class="solution-grid">
+                    <div class="solution-card-small glass-panel">
+                        <h3>🔒 100% Gated Campus</h3>
+                        <p>Every student signs in using institutional SSO (.edu). No bots, no outsiders, no parents. Only verified peers, alumni, and official organizers.</p>
+                    </div>
+                    <div class="solution-card-small glass-panel">
+                        <h3>⚡ Zero Noise Communication</h3>
+                        <p>Threaded group chats, instant announcements, and campus-specific channels keep conversations organized, searchable, and lightning-fast.</p>
+                    </div>
+                    <div class="solution-card-small glass-panel">
+                        <h3>🎨 Digital Academic Profile</h3>
+                        <p>Showcase courses, interest tags, campus clubs, verified GPA credentials, and past trade ratings. An identity built specifically for student life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT FEATURES TOUR SECTION -->
+        <section class="section-features" id="features">
+            <div class="container">
+                <div class="section-header-centered reveal-on-scroll">
+                    <span class="section-badge">Platform Tour</span>
+                    <h2 class="section-title">Built for the Modern Student</h2>
+                    <p class="section-subtitle">Take a deeper look at the core components of our operating system, engineered to scale across millions of student interactions daily.</p>
+                </div>
+
+                <!-- Feature Block 1 -->
+                <div class="feature-block reveal-on-scroll">
+                    <div class="feature-info">
+                        <span class="feature-step">01 / SECURITY</span>
+                        <h3 class="feature-heading">Verified Student Sign-On</h3>
+                        <p class="feature-text">We verify identity directly with the university’s active Active Directory. Rest easy knowing that every item listed on the marketplace, every chat message, and every ticket purchase is connected to an authentic, registered student.</p>
+                        <ul class="feature-list">
+                            <li>Instant institutional email validation</li>
+                            <li>100% isolated grids with zero cross-campus leaks</li>
+                            <li>Automatic account suspension for bad actors</li>
+                        </ul>
+                    </div>
+                    <div class="feature-preview-container glass-panel">
+                        <div class="auth-ui-preview">
+                            <div class="auth-box">
+                                <span class="auth-icon">🔑</span>
+                                <h4>Verify Your Campus</h4>
+                                <p>Select your college to link your account</p>
+                                <div class="dropdown-sim">RV College of Engineering (rvce.edu.in)</div>
+                                <input type="email" placeholder="enter your student email..." disabled value="girish.g@rvce.edu.in">
+                                <button class="btn btn-primary btn-sm btn-block">Authenticate SSO</button>
+                                <div class="secure-footer">🔒 Secured by Institutional Shibboleth & Okta</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Block 2 -->
+                <div class="feature-block block-reverse reveal-on-scroll">
+                    <div class="feature-info">
+                        <span class="feature-step">02 / LOCAL COMMERCE</span>
+                        <h3 class="feature-heading">Smart Marketplace & Trust Scores</h3>
+                        <p class="feature-text">Trade with peers with absolute safety. Our in-app trading interface integrates a rating system linked directly to student identities. Meet only at official "Campus Safe-Exchange Zones" highlighted on the app's interactive map.</p>
+                        <ul class="feature-list">
+                            <li>Verified buyer & seller peer reviews</li>
+                            <li>Dynamic product filtering by dorm, major, and graduation year</li>
+                            <li>In-app escrow-backed ticket sales</li>
+                        </ul>
+                    </div>
+                    <div class="feature-preview-container glass-panel">
+                        <div class="market-ui-preview">
+                            <div class="listing-box">
+                                <div class="listing-img-box">💻</div>
+                                <div class="listing-details">
+                                    <div class="details-top">
+                                        <span class="price-lbl">₹12,000</span>
+                                        <span class="badge-active">Active Listing</span>
+                                    </div>
+                                    <h4>iPad Pro 11" (Apple Pencil Included)</h4>
+                                    <p>Perfect condition. Selling because I upgraded for my CS design course. Pickup at the Cauvery Block canteen.</p>
+                                    <div class="seller-card">
+                                        <div class="seller-avatar p2"></div>
+                                        <div class="seller-name">
+                                            <span>Siddharth Sharma (ECE Senior)</span>
+                                            <span class="rating">⭐ 4.9 (42 Trades)</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">Message Seller</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Block 3 -->
+                <div class="feature-block reveal-on-scroll">
+                    <div class="feature-info">
+                        <span class="feature-step">03 / EVENTS</span>
+                        <h3 class="feature-heading">Smart RSVPs & Seamless QR Entry</h3>
+                        <p class="feature-text">Clubs, departments, and cultural associations can host events, manage invitations, sell entry tickets, and scan attendees in real-time. No more external third-party tools or printed check-in sheets.</p>
+                        <ul class="feature-list">
+                            <li>In-app interactive event catalogs</li>
+                            <li>Fast QR scanning for student organizers</li>
+                            <li>Automatic calendar synchronization with Apple Calendar & GCal</li>
+                        </ul>
+                    </div>
+                    <div class="feature-preview-container glass-panel">
+                        <div class="event-ui-preview">
+                            <div class="ticket-box">
+                                <div class="ticket-header">
+                                    <h4>Spring Formal 2026 🎟️</h4>
+                                    <span>RVCE Main Auditorium</span>
+                                </div>
+                                <div class="ticket-qr-section">
+                                    <div class="qr-sim">
+                                        <div class="qr-line"></div>
+                                        <svg viewBox="0 0 100 100" class="qr-svg">
+                                            <rect x="10" y="10" width="20" height="20" fill="white"/>
+                                            <rect x="70" y="10" width="20" height="20" fill="white"/>
+                                            <rect x="10" y="70" width="20" height="20" fill="white"/>
+                                            <rect x="40" y="45" width="20" height="20" fill="white"/>
+                                            <rect x="40" y="15" width="10" height="15" fill="white"/>
+                                            <rect x="75" y="75" width="15" height="15" fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <p class="ticket-id">UN-893-CS921</p>
+                                </div>
+                                <div class="ticket-details-grid">
+                                    <div>
+                                        <span class="lbl">Attendee</span>
+                                        <span class="val">M B Girish</span>
+                                    </div>
+                                    <div>
+                                        <span class="lbl">Price</span>
+                                        <span class="val">₹250 (Paid)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Block 4 (Groups & Communities) -->
+                <div class="feature-block block-reverse reveal-on-scroll">
+                    <div class="feature-info">
+                        <span class="feature-step">04 / COMMUNITIES</span>
+                        <h3 class="feature-heading">Public Clubs & Private Circles</h3>
+                        <p class="feature-text">Break down campus social fragmentation. Whether you are managing an official engineering club, coordinating student union logistics, or setting up a private study room with friends, UniConnect provides a secure, gated framework exclusive to your verified university directory. No external eyes, pure college sync.</p>
+                        <ul class="feature-list">
+                            <li>Public directories for verified academic & hobby clubs</li>
+                            <li>Gated private channels with end-to-end encrypted messaging</li>
+                            <li>Instant "Join" and "Request Access" campus-only protocols</li>
+                        </ul>
+                    </div>
+                    <div class="feature-preview-container glass-panel">
+                        <div class="groups-ui-preview">
+                            <div class="communities-box">
+                                <div class="communities-header">
+                                    <h4>Campus Communities 👥</h4>
+                                    <span>RVCE Directory</span>
+                                </div>
+                                <div class="communities-list">
+                                    <div class="community-preview-card">
+                                        <div class="comm-icon">🤖</div>
+                                        <div class="comm-details">
+                                            <span class="name">Robotics Society</span>
+                                            <span class="meta">Public • 482 active members</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-xs btn-join-comm" data-joined="false">Join</button>
+                                    </div>
+                                    <div class="community-preview-card">
+                                        <div class="comm-icon">🔑</div>
+                                        <div class="comm-details">
+                                            <span class="name">Cauvery Block study group</span>
+                                            <span class="meta">Private • 8 members</span>
+                                        </div>
+                                        <button class="btn btn-secondary btn-xs btn-request-comm" data-state="idle">Request</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Block 5 (Resources Vault) -->
+                <div class="feature-block reveal-on-scroll">
+                    <div class="feature-info">
+                        <span class="feature-step">05 / ACADEMICS</span>
+                        <h3 class="feature-heading">Verified Student Resources Vault</h3>
+                        <p class="feature-text">Stop losing invaluable campus intelligence. UniConnect provides an organized, secure, peer-to-peer library where students can securely upload and download course syllabus reviews, lecture notes, prep guides, and past exams. Verified by identity, structured by academic catalogs.</p>
+                        <ul class="feature-list">
+                            <li>Identity-verified, peer-rated study documents</li>
+                            <li>Structured organization by course code and department</li>
+                            <li>One-click high-speed secure download to personal student vault</li>
+                        </ul>
+                    </div>
+                    <div class="feature-preview-container glass-panel">
+                        <div class="resources-ui-preview">
+                            <div class="resources-box">
+                                <div class="resources-header">
+                                    <h4>Notes & Exam Prep 📚</h4>
+                                    <button class="btn btn-primary btn-xs" id="preview-upload-trigger">+ Upload Note</button>
+                                </div>
+                                <div class="resources-preview-list" id="preview-res-list">
+                                    <div class="res-preview-card">
+                                        <div class="res-icon">📄</div>
+                                        <div class="res-details">
+                                            <span class="name">Math51_Final_Cheat_Sheet.pdf</span>
+                                            <span class="meta">Math51 • ⭐ 5.0 (612 DLs)</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-xs btn-preview-dl" data-file="Math51_Final_Cheat_Sheet.pdf">Download</button>
+                                    </div>
+                                    <div class="res-preview-card">
+                                        <div class="res-icon">🧬</div>
+                                        <div class="res-details">
+                                            <span class="name">Bio41_Lab_Exam_Cheat_Sheet.pdf</span>
+                                            <span class="meta">Bio41 • ⭐ 4.8 (189 DLs)</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-xs btn-preview-dl" data-file="Bio41_Lab_Exam_Cheat_Sheet.pdf">Download</button>
+                                    </div>
+                                </div>
+                                <!-- Micro dialog simulator inside preview -->
+                                <div class="preview-upload-dialog" id="preview-upload-box" style="display:none;">
+                                    <span class="dialog-title">Upload Resource</span>
+                                    <input type="text" id="preview-up-name" placeholder="File name (e.g. Physics Cheat Sheet)">
+                                    <select id="preview-up-course">
+                                        <option value="PHYS10">PHYS10</option>
+                                        <option value="CS106B">CS106B</option>
+                                        <option value="MATH51">MATH51</option>
+                                    </select>
+                                    <div class="dialog-btns">
+                                        <button class="btn btn-xs btn-secondary" id="preview-upload-cancel">Cancel</button>
+                                        <button class="btn btn-xs btn-primary" id="preview-upload-submit">Upload</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARKET OPPORTUNITY SECTION -->
+        <section class="section-market" id="market">
+            <div class="container reveal-on-scroll">
+                <div class="section-header-centered">
+                    <span class="section-badge">Investor Opportunity</span>
+                    <h2 class="section-title">The Massive College Student Network</h2>
+                    <p class="section-subtitle">University campuses represent dense, high-frequency physical communities. Gaining high-engagement digital control of this market creates massive long-term expansion potential.</p>
+                </div>
+
+                <div class="market-stats-grid">
+                    <div class="stat-card glass-panel">
+                        <span class="stat-num" id="stat-students">40M+</span>
+                        <span class="stat-lbl">Indian College Students</span>
+                        <p class="stat-desc">An extremely high-density target audience spending 4+ hours per day on campus networks and mobile devices.</p>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <span class="stat-num" id="stat-spend">₹2.5L Cr+</span>
+                        <span class="stat-lbl">Annual Student Spending Power</span>
+                        <p class="stat-desc">Substantial domestic transactions in textbooks, student PG rentals, local dining, commutes, and campus festivals.</p>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <span class="stat-num" id="stat-engagement">92%</span>
+                        <span class="stat-lbl">Expected Daily Active Retention</span>
+                        <p class="stat-desc">Because UniConnect acts as the daily operational layer (chat, verification, marketplace), retention mimics OS-level frequency.</p>
+                    </div>
+                </div>
+
+                <div class="market-chart-container glass-panel">
+                    <h3>Engagement Frequency (Daily Sessions Per User)</h3>
+                    <p class="chart-subtitle">UniConnect integrates multiple high-frequency activities, leading to deeper daily engagement than single-focus applications.</p>
+                    
+                    <div class="bar-chart-sim">
+                        <!-- Bar 1 -->
+                        <div class="chart-row">
+                            <span class="row-label">UniConnect (Proposed)</span>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill color-purple" style="--val: 94%"></div>
+                            </div>
+                            <span class="row-value">16+ sessions</span>
+                        </div>
+                        <!-- Bar 2 -->
+                        <div class="chart-row">
+                            <span class="row-label">Discord (Chat Only)</span>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill color-neutral" style="--val: 68%"></div>
+                            </div>
+                            <span class="row-value">9 sessions</span>
+                        </div>
+                        <!-- Bar 3 -->
+                        <div class="chart-row">
+                            <span class="row-label">Instagram (Feed Only)</span>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill color-neutral" style="--val: 52%"></div>
+                            </div>
+                            <span class="row-value">7 sessions</span>
+                        </div>
+                        <!-- Bar 4 -->
+                        <div class="chart-row">
+                            <span class="row-label">LinkedIn (Career Only)</span>
+                            <div class="bar-wrapper">
+                                <div class="bar-fill color-neutral" style="--val: 18%"></div>
+                            </div>
+                            <span class="row-value">1 session</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUSINESS MODEL SECTION -->
+        <section class="section-business" id="business">
+            <div class="container reveal-on-scroll">
+                <div class="section-header-centered">
+                    <span class="section-badge">Business Model</span>
+                    <h2 class="section-title">Engineered for Hyper-Growth</h2>
+                    <p class="section-subtitle">UniConnect’s diversified revenue engine allows us to scale monetization organically alongside user activity, without compromising core social engagement.</p>
+                </div>
+
+                <div class="business-grid">
+                    <!-- Stream 1 -->
+                    <div class="business-card glass-panel">
+                        <div class="biz-badge">Escrow Fees</div>
+                        <h3 class="biz-heading">Secure Escrow Commission</h3>
+                        <p class="biz-text">We process peer-to-peer marketplace sales securely, charging a tiny 2.5% transaction commission for automated escrow handling, fraud protection, and instant peer transfers.</p>
+                    </div>
+                    <!-- Stream 2 -->
+                    <div class="business-card glass-panel">
+                        <div class="biz-badge">Subscriptions</div>
+                        <h3 class="biz-heading">UniConnect Pro Membership</h3>
+                        <p class="biz-text">A premium monthly subscription (₹99/mo) granting students personalized badge aesthetics, boosted listing visibility, free concert ticketing perks, and career-fair fast passes.</p>
+                    </div>
+                    <!-- Stream 3 -->
+                    <div class="business-card glass-panel">
+                        <div class="biz-badge">Local Ads</div>
+                        <h3 class="biz-heading">Sponsored Campus Promos</h3>
+                        <p class="biz-text">Hyper-local businesses (restaurants, book stores, coffee shops) leverage our platform to offer exclusive discounts, sponsored events, or recruitment booths directly to verified local students.</p>
+                    </div>
+                    <!-- Stream 4 -->
+                    <div class="business-card glass-panel">
+                        <div class="biz-badge">Ticketing</div>
+                        <h3 class="biz-heading">Event Service Surcharges</h3>
+                        <p class="biz-text">We take a flat ₹10 + 3% servicing commission on all university student union, cultural concert, and campus fest entry ticket sales processed through our integrated scanner app.</p>
+                    </div>
+                    <!-- Stream 5 -->
+                    <div class="business-card glass-panel">
+                        <div class="biz-badge">Institutional SaaS</div>
+                        <h3 class="biz-heading">University Administration SaaS</h3>
+                        <p class="biz-text">Advanced licensing subscriptions for administrative portals, official safety broadcasting feeds, and secure departmental communications directly managed by university officials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPETITIVE ADVANTAGE MATRIX -->
+        <section class="section-matrix" id="matrix">
+            <div class="container reveal-on-scroll">
+                <div class="section-header-centered">
+                    <span class="section-badge">Competitive Matrix</span>
+                    <h2 class="section-title">How UniConnect Wins</h2>
+                    <p class="section-subtitle">Traditional platforms excel in singular utilities, but fail to deliver a verified, campus-native system that connects all facets of college life.</p>
+                </div>
+
+                <div class="matrix-table-container glass-panel">
+                    <table class="matrix-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th class="table-brand-highlight">UniConnect</th>
+                                <th>Instagram</th>
+                                <th>Discord</th>
+                                <th>WhatsApp</th>
+                                <th>LinkedIn</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-lbl">🎓 Verified .edu Gating</td>
+                                <td class="table-brand-highlight text-checked">✔ Yes</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-lbl">🔒 Private Campus Grids (No Global Leak)</td>
+                                <td class="table-brand-highlight text-checked">✔ Yes (100% Isolated)</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-lbl">🛍️ Secure Student Marketplace</td>
+                                <td class="table-brand-highlight text-checked">✔ Yes</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-lbl">📅 Integrated Ticketing & RSVPs</td>
+                                <td class="table-brand-highlight text-checked">✔ Yes</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-lbl">💬 Threaded Campus Chats & DMs</td>
+                                <td class="table-brand-highlight text-checked">✔ Yes</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-checked">✔ Yes</td>
+                                <td class="text-checked">✔ Yes</td>
+                                <td class="text-unchecked">❌ No</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-lbl">🤝 Verified Alumni Networking</td>
+                                <td class="table-brand-highlight text-checked">✔ Yes</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-checked">✔ Yes</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-lbl">✨ Clean, Ad-Free Social Feed</td>
+                                <td class="table-brand-highlight text-checked">✔ Yes</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                                <td class="text-unchecked">❌ No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGY AND GO-TO-MARKET SECTION -->
+        <section class="section-tech" id="tech">
+            <div class="container reveal-on-scroll">
+                <div class="section-header-centered">
+                    <span class="section-badge">GTM & Technology</span>
+                    <h2 class="section-title">Built for Scale. Launched for Speed.</h2>
+                    <p class="section-subtitle">Our tech stack leverages enterprise-grade cloud systems, and our Go-To-Market playbook is built on a highly viral campus ambassador engine.</p>
+                </div>
+
+                <div class="tech-layout-grid">
+                    <!-- Left: Tech Stack Diagram -->
+                    <div class="tech-box glass-panel">
+                        <h3>Built on Modern Core Architecture</h3>
+                        <p class="tech-intro">A light, high-performance tech suite ensuring sub-100ms response times and fluid native transitions on iOS and Android devices.</p>
+                        
+                        <div class="tech-stack-visual">
+                            <div class="stack-layer">
+                                <span class="layer-title">Frontend</span>
+                                <span class="layer-tech">Flutter (Cross-Platform Native Engine)</span>
+                            </div>
+                            <div class="stack-layer">
+                                <span class="layer-title">Realtime Messaging & DB</span>
+                                <span class="layer-tech">Firebase Cloud Storage & Firestore</span>
+                            </div>
+                            <div class="stack-layer">
+                                <span class="layer-title">Authentication Gate</span>
+                                <span class="layer-tech">Custom Shibboleth SSO API Gateway</span>
+                            </div>
+                            <div class="stack-layer">
+                                <span class="layer-title">Verification & AI Matching</span>
+                                <span class="layer-tech">NodeJS Microservices & Python NLP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Go-To-Market Plan -->
+                    <div class="gtm-box glass-panel">
+                        <h3>Our Hyper-Viral GTM Playbook</h3>
+                        <p class="gtm-intro">We scale campuses sequentially using a highly effective growth mechanism, turning one university live at a time.</p>
+                        
+                        <ol class="gtm-steps">
+                            <li>
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <h4>Establish Campus Ambassadors</h4>
+                                    <p>Recruit highly connected student leaders, club presidents, and fest coordinators to seed local campus communities.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <h4>SSO Validation Whitelist</h4>
+                                    <p>Open whitelist signups. Unlock a university campus only once a threshold of 1,500 active students joins the regional waitlist.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <h4>Interactive Campus Drops</h4>
+                                    <p>Conduct safe campus treasure hunts, partner with local cafes for free rewards, and host exclusive ticketing releases.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="step-num">4</div>
+                                <div class="step-content">
+                                    <h4>Alumni Integration Boost</h4>
+                                    <p>Bridge the local network to high-value alumni for mentoring drops, internship boards, and resume audits.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINANCIALS AND ROADMAP SECTION -->
+        <section class="section-roadmap" id="roadmap">
+            <div class="container reveal-on-scroll">
+                <div class="section-header-centered">
+                    <span class="section-badge">Roadmap</span>
+                    <h2 class="section-title">Our Growth Timeline</h2>
+                    <p class="section-subtitle">Our execution-focused operational roadmap charts our expansion from local university rollouts to a global academic system.</p>
+                </div>
+
+                <!-- Interactive Roadmap Tabs -->
+                <div class="roadmap-controls">
+                    <button class="roadmap-tab active" data-phase="1">Phase 1: Seed</button>
+                    <button class="roadmap-tab" data-phase="2">Phase 2: Scale</button>
+                    <button class="roadmap-tab" data-phase="3">Phase 3: Connect</button>
+                    <button class="roadmap-tab" data-phase="4">Phase 4: Network</button>
+                </div>
+
+                <div class="roadmap-viewport glass-panel">
+                    <!-- Phase 1 Content -->
+                    <div class="roadmap-phase-content active" id="phase-1">
+                        <div class="phase-meta">
+                            <span class="phase-tag">Launch Year 1</span>
+                            <h3>Establish Core Foundations</h3>
+                        </div>
+                        <p class="phase-desc">Securely seed initial tier-1 testbed universities with highly interactive student socials, localized marketplaces, and real-time announcements.</p>
+                        <div class="phase-bullets-grid">
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Deploy iOS & Android Core App</h5>
+                                    <p>Finalize chat architecture and direct peer-to-peer verification protocols.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Secure Initial 50 College Ambassador Networks</h5>
+                                    <p>Establish regional leads across Bengaluru's top engineering colleges (RVCE, PESU, BMSCE, MSRIT, IIIT-B).</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Launch Local Safe-Exchange Marketplace</h5>
+                                    <p>Initiate textbook and housing sales inside secure campus exchange zones.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 Content -->
+                    <div class="roadmap-phase-content" id="phase-2">
+                        <div class="phase-meta">
+                            <span class="phase-tag">Launch Year 2</span>
+                            <h3>AI Placement & Smart Matching</h3>
+                        </div>
+                        <p class="phase-desc">Incorporate intelligent algorithms to connect student academic transcripts and projects to elite recruiting databases, and scale ticketing software.</p>
+                        <div class="phase-bullets-grid">
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Smart AI Tutor Matching</h5>
+                                    <p>Match students taking challenging majors to top-performing senior tutors on campus automatically.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Smart Ticketing System</h5>
+                                    <p>Roll out ticket sales processing with automated campus door validation scanners.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Expand to 250 Universities Nationwide</h5>
+                                    <p>Scale whitelisted SSO integrations to capture over 2 million registered student profiles.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 Content -->
+                    <div class="roadmap-phase-content" id="phase-3">
+                        <div class="phase-meta">
+                            <span class="phase-tag">Launch Year 3</span>
+                            <h3>Alumni Networks & Student Economy</h3>
+                        </div>
+                        <p class="phase-desc">Bridge student life directly to verified graduates. Establish mentorship groups, career advisory boards, and a verified student creator economy.</p>
+                        <div class="phase-bullets-grid">
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Verified Alumni Bridge</h5>
+                                    <p>Unlock structured mentoring channels allowing students to chat with graduates at top firms.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>UniConnect Creator Economy</h5>
+                                    <p>Enable student creators to publish podcasts, study guides, and campus stories behind tiny subscription gates.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Direct Internship Portals</h5>
+                                    <p>Enable fast, single-click student applications to Stripe, Apple, Google, and McKinsey internship programs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 4 Content -->
+                    <div class="roadmap-phase-content" id="phase-4">
+                        <div class="phase-meta">
+                            <span class="phase-tag">Launch Year 4</span>
+                            <h3>Global Expansion & Enterprise SaaS</h3>
+                        </div>
+                        <p class="phase-desc">Roll out UniConnect globally and implement Enterprise-grade SaaS packages tailored to university administrative branches.</p>
+                        <div class="phase-bullets-grid">
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>International College Deployments</h5>
+                                    <p>Expand whitelists to Oxford, Cambridge, Tokyo University, and top global colleges.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Administration Enterprise Portals</h5>
+                                    <p>Officially license administration tools to departments for secure official communication.</p>
+                                </div>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-chk">✔</span>
+                                <div>
+                                    <h5>Unified Academic Identity Ledger</h5>
+                                    <p>Establish a verified academic credit registry, standardizing verified project achievements.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL VISION / CTA SECTION -->
+        <section class="section-final-cta" id="founders">
+            <div class="container reveal-on-scroll">
+                
+                <!-- Founders Block -->
+                <div class="founders-spotlight glass-panel">
+                    <span class="badge-tag-alt">Our Leadership</span>
+                    <h3>Founded by Visionaries. Built for Students.</h3>
+                    <p class="founders-intro">We are engineers, developers, and campus organizers who experienced the broken nature of university platforms firsthand. We are building the future we wished we had.</p>
+                    
+                    <div class="founders-grid">
+                        <div class="founder-card">
+                            <img class="founder-photo f1" src="assets/girish.jpg?v=1.0" alt="M B Girish">
+                            <div class="founder-details">
+                                <h4>M B Girish</h4>
+                                <span class="founder-role">Founder & CEO</span>
+                                <p class="founder-bio">Tech Innovator & Student Community Architect. Passionate about campus micro-networks, unified communication systems, and building high-performance platforms for modern student hubs.</p>
+                            </div>
+                        </div>
+                        <div class="founder-card">
+                            <img class="founder-photo f2" src="assets/ankush.jpg?v=1.0" alt="Ankush N">
+                            <div class="founder-details">
+                                <h4>Ankush N</h4>
+                                <span class="founder-role">Co-Founder & CTO</span>
+                                <p class="founder-bio">Software Engineer & Product Architect. Expert in scalable cloud architectures, mobile cross-platform applications, and building lightning-fast student networking platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Conversion Card -->
+                <div class="final-cta-card glass-panel btn-glow">
+                    <h2 class="final-headline">Ready to Upgrade Your College Experience?</h2>
+                    <p class="final-subheadline">Join the future of college life. Secure your campus namespace, build a safer marketplace, find events instantly, and unlock your alumni network.</p>
+                    
+                    <div class="final-signup-form">
+                        <div class="input-glow-wrapper">
+                            <input type="email" placeholder="Enter your college email (.edu)" id="input-final-email">
+                        </div>
+                        <button class="btn btn-primary btn-lg btn-glow trigger-waitlist-modal" id="btn-final-signup">Join the Waitlist</button>
+                    </div>
+                    
+                    <span class="form-disclaimer">⚡ Secure SSO setup. Only active university members are admitted.</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="brand-logo">
+                        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+                        </svg>
+                        <span class="logo-text">Uni<span class="highlight-text">Connect</span></span>
+                    </a>
+                    <p class="footer-desc">The Operating System for College Life. Connecting student socials, campus chat, local trades, ticketers, and career pathways securely.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">🕊️</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Discord">👾</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h4>The Platform</h4>
+                    <a href="#problem">The Pain Points</a>
+                    <a href="#solution">Our Solution</a>
+                    <a href="#features">Feature Tour</a>
+                    <a href="#roadmap">Execution Timeline</a>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Join the Growth</h4>
+                    <a href="#" class="trigger-ambassador-modal">Become an Ambassador</a>
+                    <a href="#" class="trigger-waitlist-modal">Student Waitlist</a>
+                    <a href="#" id="trigger-partner-modal">University Partnerships</a>
+                    <a href="#" id="trigger-investor-modal">Investor Portal</a>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Legal & Safety</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Campus Safety Rules</a>
+                    <a href="#">SSO Security Protocols</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 UniConnect Technologies, Inc. All rights reserved. Made with 💜 by and for university students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         INTERACTIVE OVERLAY MODALS
+         ========================================== -->
+
+    <!-- 1. WAITLIST SIGNUP MODAL -->
+    <div class="modal-overlay" id="modal-waitlist">
+        <div class="modal-card glass-panel">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge">✨ Waitlist Portal</span>
+                <h3>Join the UniConnect Waitlist</h3>
+                <p>Verify your university email (.edu) to secure early access and reserve your username.</p>
+            </div>
+            
+            <form id="form-waitlist">
+                <div class="form-group">
+                    <label for="wl-name">Full Name</label>
+                    <input type="text" id="wl-name" required placeholder="e.g., M B Girish">
+                </div>
+                <div class="form-group">
+                    <label for="wl-email">University Email (.edu / .in)</label>
+                    <input type="email" id="wl-email" required placeholder="e.g., girish@rvce.edu.in">
+                    <span class="field-hint">Must be a valid college email address.</span>
+                </div>
+                <div class="form-group">
+                    <label for="wl-college">Select University</label>
+                    <select id="wl-college" required>
+                        <option value="" disabled selected>Select your campus...</option>
+                        <option value="rvce">RV College of Engineering (RVCE)</option>
+                        <option value="pesu">PES University (PESU)</option>
+                        <option value="bmsce">BMS College of Engineering (BMSCE)</option>
+                        <option value="msrit">Ramaiah Institute of Technology (MSRIT)</option>
+                        <option value="iiitb">IIIT Bangalore (IIIT-B)</option>
+                        <option value="other">Other Indian Campus (.edu/.in verified)</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="wl-agree" required checked>
+                    <label for="wl-agree">I agree to campus community guidelines and verify I am a registered student.</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-glow">Submit Waitlist Application</button>
+            </form>
+            
+            <div class="modal-success-state" id="wl-success">
+                <div class="success-icon">✓</div>
+                <h3>You are on the list!</h3>
+                <p>A verification link has been sent to your university inbox. We will notify you as soon as your campus whitelists 1,500 active users!</p>
+                <div class="share-proof-card">
+                    <span class="share-title">Invite friends to jump the queue:</span>
+                    <div class="share-link-sim">
+                        <span id="ref-link">https://uniconnect-livid.vercel.app/?ref=girish42a</span>
+                        <button class="btn btn-secondary btn-sm" id="btn-copy-ref">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. CAMPUS AMBASSADOR MODAL -->
+    <div class="modal-overlay" id="modal-ambassador">
+        <div class="modal-card glass-panel">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge">🎓 Leadership Role</span>
+                <h3>Become a Campus Ambassador</h3>
+                <p>Lead the launch of UniConnect at your university. Drive the waitlist, sponsor campus clubs, and build a high-performance student startup resume.</p>
+            </div>
+            
+            <form id="form-ambassador">
+                <div class="form-group">
+                    <label for="amb-name">Full Name</label>
+                    <input type="text" id="amb-name" required placeholder="e.g., Aditya Sen">
+                </div>
+                <div class="form-group">
+                    <label for="amb-email">University Email (.edu / .in)</label>
+                    <input type="email" id="amb-email" required placeholder="e.g., aditya@rvce.edu.in">
+                </div>
+                <div class="form-group">
+                    <label for="amb-college">Your Campus</label>
+                    <input type="text" id="amb-college" required placeholder="e.g., RVCE Bengaluru">
+                </div>
+                <div class="form-group">
+                    <label for="amb-social">LinkedIn / Instagram Profile</label>
+                    <input type="url" id="amb-social" required placeholder="https://linkedin.com/in/username">
+                </div>
+                <div class="form-group">
+                    <label for="amb-role">Why are you the perfect fit to launch UniConnect?</label>
+                    <textarea id="amb-role" rows="3" required placeholder="Briefly describe your campus involvement, leadership experience, or student club connections..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-glow">Submit Ambassador Application</button>
+            </form>
+            
+            <div class="modal-success-state" id="amb-success">
+                <div class="success-icon">🚀</div>
+                <h3>Application Received!</h3>
+                <p>Thank you for stepping up, leader! Our campus launch directors will review your application and reach out within 48 hours for a quick Zoom interview.</p>
+                <button class="btn btn-secondary btn-block modal-close-btn">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. PARTNERSHIP / INVESTOR MODAL -->
+    <div class="modal-overlay" id="modal-partner">
+        <div class="modal-card glass-panel">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge">💼 Partnership Portal</span>
+                <h3 id="partner-modal-title">University Partnerships</h3>
+                <p id="partner-modal-desc">Learn how to officially sponsor departments, integrate safe-exchange lockers, or request institutional admin portals.</p>
+            </div>
+            
+            <form id="form-partner">
+                <div class="form-group">
+                    <label for="pt-name">Full Name</label>
+                    <input type="text" id="pt-name" required placeholder="e.g., Prof. R. K. Shastry">
+                </div>
+                <div class="form-group">
+                    <label for="pt-email">Official Email</label>
+                    <input type="email" id="pt-email" required placeholder="e.g., shastry.rk@rvce.edu.in">
+                </div>
+                <div class="form-group">
+                    <label for="pt-org">Institution / Firm Name</label>
+                    <input type="text" id="pt-org" required placeholder="e.g., RVCE Academic Office">
+                </div>
+                <div class="form-group">
+                    <label for="pt-msg">Inquiry Details</label>
+                    <textarea id="pt-msg" rows="4" required placeholder="Let us know what you would like to accomplish..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-glow">Submit Inquiry</button>
+            </form>
+            
+            <div class="modal-success-state" id="pt-success">
+                <div class="success-icon">🤝</div>
+                <h3>Message Sent</h3>
+                <p>Your inquiry has been routed directly to our founders. We appreciate your interest in UniConnect and will reply within 1 business day.</p>
+                <button class="btn btn-secondary btn-block modal-close-btn">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Interactivity Script (declared as ES Module for Firebase integration) -->
+    <script type="module" src="app.js?v=2"></script>
+</body>
+</html>
